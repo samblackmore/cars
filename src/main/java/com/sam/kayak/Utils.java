@@ -31,4 +31,12 @@ class Utils {
         input.sendKeys(SELECT_ALL);
         input.sendKeys(text);
     }
+
+    static void replaceTextAndSubmit(WebDriver driver, By byLocator, String text) {
+        WebElement input = driver.findElement(byLocator);
+        input.click();
+        input.sendKeys(SELECT_ALL);
+        input.sendKeys(text);
+        input.sendKeys(Keys.ENTER);
+    }
 }
