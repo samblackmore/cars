@@ -11,6 +11,10 @@ class Utils {
 
     private static final String SELECT_ALL = Keys.chord(Keys.CONTROL, "a");
 
+    static By byPartialId(String partialId) {
+        return By.xpath(String.format("//*[contains(@id,'%s')]", partialId));
+    }
+
     static WebElement waitForElement(WebDriver driver, By byLocator, int seconds) {
         return (new WebDriverWait(driver, seconds))
                 .until(ExpectedConditions.presenceOfElementLocated(byLocator));

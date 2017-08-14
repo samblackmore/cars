@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static com.sam.kayak.Utils.*;
 
@@ -34,11 +32,11 @@ public class SearchPage {
 
     private By pickupLocator = By.name("pickup");
     private By dropoffLocator = By.name("dropoff");
-    private By pickupDateLocator = By.xpath("//div[contains(@id,'pickup-date-input')]");
-    private By dropoffDateLocator = By.xpath("//div[contains(@id,'dropoff-date-input')]");
-    private By sameDropoffLocator = By.xpath("//label[contains(@id,'same-label')]");
-    private By diffDropoffLocator = By.xpath("//label[contains(@id,'oneway-label')]");
-    private By compareNoneLocator = By.xpath("//*[contains(@id,'compareTo-none')]");
+    private By pickupDateLocator = byPartialId("pickup-date-input");
+    private By dropoffDateLocator = byPartialId("dropoff-date-input");
+    private By sameDropoffLocator = byPartialId("same-label");
+    private By diffDropoffLocator = byPartialId("oneway-label");
+    private By compareNoneLocator = byPartialId("compareTo-none");
 
     private By bySearchResult(String location) {
         String xpath = String.format(locationResultFormat, location);
