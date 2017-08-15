@@ -15,21 +15,21 @@ import java.util.regex.Pattern;
 import static com.sam.kayak.Utils.waitForElement;
 import static org.junit.Assert.assertTrue;
 
-public class ResultsPage {
+class ResultsPage {
 
     // Example URL - https://www.kayak.com/cars/San-Francisco,CA-c13852/2017-08-13/2017-08-14
 
-    private static final String URL_REGEX = SearchPage.URL + "/(.*)/(.*)/(.*)";
+    private static final String URL_REGEX = "https://www.+kayak.+/cars/(.*)/(.*)/(.*)";
     private static final SimpleDateFormat URL_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     private Date pickupDate;
     private Date dropoffDate;
     private final WebDriver driver;
 
-    By resultsBodyLocator = By.className("resultsBody");
-    By priceResultLocator = By.className("priceValue");
+    private By resultsBodyLocator = By.className("resultsBody");
+    private By priceResultLocator = By.className("priceValue");
 
-    public ResultsPage(WebDriver driver) {
+    ResultsPage(WebDriver driver) {
         this.driver = driver;
 
         if (driver.findElements(resultsBodyLocator).isEmpty()) {
@@ -56,16 +56,20 @@ public class ResultsPage {
 
         List<WebElement> prices = driver.findElements(priceResultLocator);
 
-        // TODO - What if the currency isn't dollars?
-        String lowestPrice = prices.get(0).getText().replace("$", "");
+        String lowestPrice = prices.get(0).getText();
+        String priceRegex = ".?+([0-9]+)";
+        Pattern r = Pattern.compile(priceRegex);
+        Matcher m = r.matcher(lowestPrice);
 
-        return Integer.valueOf(lowestPrice);
+        assertTrue(m.find());
+
+        return Integer.valueOf(m.group(1));
     }
 
-    public SearchPage goBack() {
+    /*public SearchPage goBack() {
         driver.navigate().back();
         return new SearchPage(driver);
-    }
+    }*/
 
     public Date getPickupDate() {
         return pickupDate;

@@ -2,6 +2,7 @@ package com.sam.kayak;
 
 import org.apache.commons.lang3.text.StrBuilder;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PriceComparison {
@@ -35,12 +36,11 @@ public class PriceComparison {
     @Override
     public String toString() {
 
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
         StrBuilder s = new StrBuilder();
 
         s.appendln(String.format("%s - %s", pickup, dropoff));
-        s.appendln(String.format("%s - %s",
-                SearchPage.DATE_FORMAT.format(pickupDate),
-                SearchPage.DATE_FORMAT.format(dropoffDate)));
+        s.appendln(String.format("%s - %s", dateFormat.format(pickupDate), dateFormat.format(dropoffDate)));
         s.appendln(String.format("Cheapest one-way: %s", lowestPriceOneWay));
         s.appendln(String.format("Cheapest return: %s", lowestPriceReturn));
 

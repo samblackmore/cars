@@ -8,28 +8,26 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 import static com.sam.kayak.Utils.*;
+import static org.apache.commons.lang3.time.DateUtils.addDays;
 
 public class SearchPage {
 
     private final WebDriver driver;
-    public static final String URL = "https://www.kayak.com/cars";
-    public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("MM/dd/yyyy");
+    private SimpleDateFormat dateFormat = null;
 
-
-    public SearchPage(WebDriver driver) {
-        this.driver = driver;
-
-        // Check that we're on the right page
-        if (!URL.equals(driver.getCurrentUrl())) {
-            throw new IllegalStateException("This is not the search page!");
-        }
+    private final static List<SimpleDateFormat> POSSIBLE_DATE_FORMATS = new ArrayList<>();
+    static {
+        POSSIBLE_DATE_FORMATS.add(new SimpleDateFormat("dd/MM/yyyy"));
+        POSSIBLE_DATE_FORMATS.add(new SimpleDateFormat("MM/dd/yyyy"));
     }
 
-    private String locationResultFormat = "//*[@class='airportCode']/*[text()='%s']";
-
+    private By searchBodyLocator = By.className("CarsSearch");
     private By pickupLocator = By.name("pickup");
     private By dropoffLocator = By.name("dropoff");
     private By pickupDateLocator = byPartialId("pickup-date-input");
@@ -37,39 +35,66 @@ public class SearchPage {
     private By sameDropoffLocator = byPartialId("same-label");
     private By diffDropoffLocator = byPartialId("oneway-label");
     private By compareNoneLocator = byPartialId("compareTo-none");
+    private By localeMenuLocator = byPartialId("countryPicker-dropdown");
 
-    private By bySearchResult(String location) {
-        String xpath = String.format(locationResultFormat, location);
-        return By.xpath(xpath);
+    private String airportCodeResultXPathFormat = "//*[@class='airportCode']/*[text()='%s']";
+    private String localeXPathFormat = "//*[@data-locale='%s']";
+
+    SearchPage(WebDriver driver) {
+        this.driver = driver;
+
+        if (driver.findElements(searchBodyLocator).isEmpty())
+            throw new IllegalStateException("This is not the search page!");
+
+        // Work out which date format is currently in use
+        // based on the pre-populated value when page first loads
+        WebElement dateElement = this.driver.findElement(pickupDateLocator);
+        dateElement.click();
+        String actualDate = dateElement.getText();
+        Date expectedDate = addDays(new Date(), 1);
+
+        for (SimpleDateFormat formatter : POSSIBLE_DATE_FORMATS) {
+            if (actualDate.equals(formatter.format(expectedDate)))
+                dateFormat = formatter;
+        }
+
+        if (dateFormat == null)
+            throw new IllegalStateException("Date format not recognized");
     }
 
     public SearchPage typePickupLocation(String location) {
+        By airportCodeResultLocator = By.xpath(String.format(airportCodeResultXPathFormat, location));
+
         replaceText(driver, pickupLocator, location);
-        waitForElement(driver, bySearchResult(location), 10);
-        driver.findElement(bySearchResult(location)).click();
+        waitForElement(driver, airportCodeResultLocator, 10);
+        // Find again to avoid stale link?
+        driver.findElement(airportCodeResultLocator).click();
+
         return this;
     }
 
     public SearchPage typeDropoffLocation(String location) {
+        By airportCodeResultLocator = By.xpath(String.format(airportCodeResultXPathFormat, location));
+
         replaceText(driver, dropoffLocator, location);
-        waitForElement(driver, bySearchResult(location), 10);
-        driver.findElement(bySearchResult(location)).click();
+        waitForElement(driver, airportCodeResultLocator, 10);
+        driver.findElement(airportCodeResultLocator).click();
         return this;
     }
 
-    public SearchPage enterDates(Date pickupdate, Date dropoffDate) {
+    public SearchPage enterDates(Date pickupDate, Date dropoffDate) {
 
-        long diff = dropoffDate.getTime() - pickupdate.getTime();
+        long diff = dropoffDate.getTime() - pickupDate.getTime();
         assert diff > 0;
 
         // Pickup date can be typed directly
-        replaceTextAndSubmit(driver, pickupDateLocator, DATE_FORMAT.format(pickupdate));
+        replaceTextAndSubmit(driver, pickupDateLocator, dateFormat.format(pickupDate));
 
         // Keyboard control then moves to on-screen calendar
         WebElement dropoffDateElement = driver.findElement(dropoffDateLocator);
 
         // Press right arrow until we get desired date
-        while (!dropoffDateElement.getText().equals(DATE_FORMAT.format(dropoffDate))) {
+        while (!dropoffDateElement.getText().equals(dateFormat.format(dropoffDate))) {
             dropoffDateElement.sendKeys(Keys.ARROW_RIGHT);
         }
 
@@ -101,7 +126,7 @@ public class SearchPage {
     }
 
     public ResultsPage searchReturn(Date pickupDate, Date dropoffDate, String location) {
-        getFirstVisibleElement(driver, sameDropoffLocator).click();
+        chooseSameDropoff();
         typePickupLocation(location);
         enterDates(pickupDate, dropoffDate);
         compareNone();
@@ -109,11 +134,35 @@ public class SearchPage {
     }
 
     public ResultsPage searchOneWay(Date pickupDate, Date dropoffDate, String pickupLocation, String dropoffLocation) {
-        getFirstVisibleElement(driver, diffDropoffLocator).click();
+        chooseDifferentDropoff();
         typePickupLocation(pickupLocation);
         typeDropoffLocation(dropoffLocation);
         enterDates(pickupDate, dropoffDate);
         compareNone();
         return submitSearch();
+    }
+
+    public SearchPage changeLocale(Locale locale) {
+        String localeString = locale.toString().replace("_", "-");
+        By localeLocator = By.xpath(String.format(localeXPathFormat, localeString));
+
+        driver.findElement(localeMenuLocator).click();
+        //driver.findElement(localeLocator).click();
+
+        // Browse directly to new locale ensures wait till page load
+        WebElement link = driver.findElement(localeLocator);
+        WebElement parent = link.findElement(By.xpath(".."));
+
+        String url = link.getAttribute("href");
+
+        if (url == null) {
+            url = parent.getAttribute("href");
+        }
+
+
+        link.click();
+        driver.get(url);
+
+        return new SearchPage(driver);
     }
 }
