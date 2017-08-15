@@ -8,11 +8,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
+import java.util.*;
 
 import static java.util.stream.Collectors.toList;
 import static org.apache.commons.lang3.time.DateUtils.addDays;
@@ -26,27 +22,9 @@ public class KayakTest {
     private final int DATES_PER_TEST = 5;
     private final int DEFAULT_RENTAL_DURATION = 7;
 
-    private List<Date> getTestDates() {
-        List<Date> dates = new ArrayList<>();
-        Date tomorrow = addDays(new Date(), 1);
-
-        for (int i = 0; i < DATES_PER_TEST; i++) {
-            dates.add(addWeeks(tomorrow, i));
-        }
-
-        return dates;
-    }
-
-    private boolean sameDay(Date date1, Date date2) {
-        return date1.getDay() == date2.getDay()
-                && date1.getMonth() == date2.getMonth()
-                && date1.getYear() == date2.getYear();
-    }
-
     @Before
     public void setup() {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
     }
 
     @After
@@ -98,8 +76,8 @@ public class KayakTest {
             ResultsPage resultsPage = searchPage.submitSearch();
 
             // Check search was entered correctly
-            assertTrue(sameDay(resultsPage.getPickupDate(), pickupDate));
-            assertTrue(sameDay(resultsPage.getDropoffDate(), dropoffDate));
+            assertTrue(isSameDay(resultsPage.getPickupDate(), pickupDate));
+            assertTrue(isSameDay(resultsPage.getDropoffDate(), dropoffDate));
 
             int lowestPriceReturn = resultsPage.getLowestPrice();
 
@@ -129,5 +107,30 @@ public class KayakTest {
             failedTests.forEach(r -> report.appendln(r.toString()));
             Assert.fail("The following tests failed: \n" + report);
         }
+    }
+
+    private List<Date> getTestDates() {
+
+        List<Date> dates = new ArrayList<>();
+        Date tomorrow = addDays(new Date(), 1);
+
+        for (int i = 0; i < DATES_PER_TEST; i++) {
+            dates.add(addWeeks(tomorrow, i));
+        }
+
+        return dates;
+    }
+
+    private boolean isSameDay(Date date1, Date date2) {
+
+        Calendar cal1 = Calendar.getInstance();
+        Calendar cal2 = Calendar.getInstance();
+
+        cal1.setTime(date1);
+        cal2.setTime(date2);
+
+        return cal1.get(Calendar.DATE) == cal2.get(Calendar.DATE)
+                && cal1.get(Calendar.MONTH) == cal2.get(Calendar.MONTH)
+                && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR);
     }
 }

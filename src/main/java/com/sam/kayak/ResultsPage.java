@@ -36,6 +36,7 @@ class ResultsPage {
             throw new IllegalStateException("This is not the results page!");
         }
 
+        // Use regex to extract dates from URL
         String url = driver.getCurrentUrl();
         Pattern r = Pattern.compile(URL_REGEX);
         Matcher m = r.matcher(url);

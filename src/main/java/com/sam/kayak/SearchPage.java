@@ -25,6 +25,7 @@ public class SearchPage {
     static {
         POSSIBLE_DATE_FORMATS.add(new SimpleDateFormat("dd/MM/yyyy"));
         POSSIBLE_DATE_FORMATS.add(new SimpleDateFormat("MM/dd/yyyy"));
+        POSSIBLE_DATE_FORMATS.add(new SimpleDateFormat("yyyy/MM/dd"));
     }
 
     private By searchBodyLocator = By.className("CarsSearch");
@@ -143,24 +144,29 @@ public class SearchPage {
     }
 
     public SearchPage changeLocale(Locale locale) {
+
         String localeString = locale.toString().replace("_", "-");
         By localeLocator = By.xpath(String.format(localeXPathFormat, localeString));
 
+        // Countries drop-down
         driver.findElement(localeMenuLocator).click();
-        //driver.findElement(localeLocator).click();
 
-        // Browse directly to new locale ensures wait till page load
+        // Find our locale
         WebElement link = driver.findElement(localeLocator);
         WebElement parent = link.findElement(By.xpath(".."));
 
+        // Get a url we can wait for
         String url = link.getAttribute("href");
 
+        // If a country has multiple locales, the parent has the url
         if (url == null) {
             url = parent.getAttribute("href");
         }
 
-
+        // Change locale
         link.click();
+
+        // Wait till page fully loaded
         driver.get(url);
 
         return new SearchPage(driver);

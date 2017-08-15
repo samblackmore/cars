@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static org.junit.Assert.assertNotNull;
+
 class Utils {
 
     private static final String SELECT_ALL = Keys.chord(Keys.CONTROL, "a");
@@ -26,7 +28,7 @@ class Utils {
                 return element;
             }
         }
-        return null;
+        throw new IllegalArgumentException("No visible elements found!");
     }
 
     static void replaceText(WebDriver driver, By byLocator, String text) {
