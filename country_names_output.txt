@@ -1,0 +1,170 @@
+United States
+380 cities:
+San Diego International Airport, San Francisco International Airport, San Jose Municipal Airport, "Los Angeles, CA", "Orlando, FL", "San Francisco, CA", John Wayne International Airport, "Atlanta, GA", San Antonio International Airport, "San Diego, CA", Sanford Intl.- Central Fl Regional Apt., "San Jose, CA", "Austin, TX", "San Antonio, TX", "Fort Myers, FL", "Albuquerque, NM", "Columbus, OH", "Santa Ana, CA", "San Juan, PR", "Reno, NV", "Fort Worth, TX", "Sanford, FL", Santa Barbara Municipal Airport, "Columbia, SC", "Santa Monica, CA", "Santa Rosa, CA", "South San Francisco, CA", "Santa Clara, CA", "Eugene, OR", "Santa Barbara, CA", "San Bernardino, CA", "Santa Fe, NM", "San Mateo, CA", "San Rafael, CA", "Clarksville, TN", Sonoma County Airport, "Santa Cruz, CA", "Santa Clarita, CA", "San Ramon, CA", Santa Fe Airport, County Airport, "Ventura, CA", "San Luis Obispo, CA", "Simi Valley, CA", "Topeka, KS", "Roswell, GA", "San Bruno, CA", Santa Maria Public  Airport, "San Pedro, CA", "Richmond, CA", "Mission Viejo, CA", "San Leandro, CA", "Terre Haute, IN", "Aguadilla, PR", "Novato, CA", "Sandy, UT", "San Angelo, TX", "San Marcos, CA", Mathis Field, "Camarillo, CA", "San Marcos, TX", "Boone, NC", "San Clemente, CA", "Carolina, PR", "Santa Maria, CA", "San Fernando, CA", "Sandusky, OH", "Sanford, NC", "San Gabriel, CA", "Pottstown, PA", "San Ysidro, CA", "Santee, CA", "Goleta, CA", "Alamogordo, NM", "San Pablo, CA", "Caguas, PR", "Edinburg, TX", "Potsdam, NY", "Seaside, CA", "Bayamon, PR", "San Juan Capistrano, CA", "Mayaguez, PR", "Leesville, LA", "Rancho Santa Margarita, CA", "Hershey, PA", "Poulsbo, WA", "San Dimas, CA", "Alamosa, CO", "San Carlos, CA", "Fajardo, PR", "Sanford, ME", "Sandpoint, ID", "Miramar Beach, FL", Sanford Regional Airport, "Port Washington, NY", "Arecibo, PR", "Ponce, PR", "San Jacinto, CA", "Dickinson, TX", "Friday Harbor, WA", "Tehachapi, CA", "Riverton, WY", "Santa Paula, CA", "Sanibel, FL", "Santa Fe Springs, CA", "Greensburg, IN", "Alice, TX", "Taylor, TX", "San Lorenzo, CA", "Dorado, PR", "Bluefield, WV", "Ashland, WI", "Avalon, CA", "Santa Rosa Beach, FL", "Sandwich, MA", "Southbridge, MA", "Humacao, PR", "Custer, SD", "Guaynabo, PR", "Espanola, NM", "Sandy, OR", "Harrison Township, MI", "Vail, AZ", "Santa Rosa, NM", "Keokuk, IA", "Thermal, CA", "Kings Park, NY", "San Anselmo, CA", "Grants, NM", "Manati, PR", "Sandersville, GA", "Sand Springs, OK", "Johnson City, TX", "Sandston, VA", "El Campo, TX", "Bernalillo, NM", "San Benito, TX", "Cayey, PR", "Vega Baja, PR", "Port Saint Joe, FL", "Rancho Santa Fe, CA", "Guayama, PR", "Hatillo, PR", "Sandwich, IL", "Sanger, CA", "Sandusky, MI", "Santee, SC", "Santa Fe, TX", "Alachua, FL", Santa Monica Airport, "San Luis, AZ", "Cut Bank, MT", "San Juan, TX", "Rio Grande City, TX", "Upper Sandusky, OH", "San Martin, CA", "Gilmer, TX", "Hudson Falls, NY", "Rosharon, TX", "San Marino, CA", "San Simeon, CA", "Magee, MS", "Isabela, PR", "Toa Baja, PR", "Robstown, TX", "Oceanport, NJ", "White Sands Missile Range, NM", "San Diego, TX", "Robbinsville, NC", "Santa Ynez, CA", "Rangeley, ME", "Gustine, CA", "Sanger, TX", "Clinton, IN", "San Antonio, FL", "Sandy Hook, CT", "Trujillo Alto, PR", "Gurabo, PR", "San Luis Rey, CA", "Sandy Spring, MD", "Salinas, PR", "Corozal, PR", "Sandy Springs, SC", "Deposit, NY", "Santa Claus, IN", "Quebradillas, PR", "San Sebastian, PR", "Sanderson, TX", "Dresser, WI", "San Andreas, CA", "Mathis, TX", "San German, PR", "Coamo, PR", "San Lorenzo, PR", "East Sandwich, MA", "Sandown, NH", "Santaquin, UT", "Morrilton, AR", "Bassett, VA", "West Terre Haute, IN", "San Quentin, CA", "Jean, NV", "New Town, ND", "Sandy Creek, NY", "Vega Alta, PR", "Fort Garland, CO", "Arlington, VT", "Juana Diaz, PR", "Sandisfield, MA", "San Felipe, TX", Santa Ynez Airport, "Lyons, GA", "San Carlos, AZ", "Sabana Grande, PR", "Pigeon, MI", "Santa Isabel, PR", "Sanborn, NY", "Antonito, CO", "Las Piedras, PR", "Jackpot, NV", "Santa Anna, TX", "San Juan Bautista, CA", "Big Sandy, TN", "Sanford, MI", "San Elizario, TX", "Sand Lake, MI", "Sandy Point, ME", "San Saba, TX", "Sanborn, MN", "Santa Teresa, NM", "Milano, TX", "Naguabo, PR", "Sandstone, MN", "Aibonito, PR", San Carlos Airport, "Jackman, ME", "San Antonio, NM", "Santa Rosa, TX", "Harwood, TX", "Britt, MN", "Loiza, PR", "Santa Cruz, NM", "Sandy Hook, KY", "Big Sandy, MT", "San Miguel, CA", "Algodones, NM", "Raymondville, TX", "La Mesa, NM", "Fort Plain, NY", "North Sandwich, NH", "San Augustine, TX", "Santa Clara, NM", "San Isidro, TX", "San Mateo, FL", "Patillas, PR", "Utuado, PR", "San Juan Pueblo, NM", "Sandia, TX", "Santa Maria, TX", "Port Crane, NY", "Rye, CO", "Spring Lake, MN", "Chimayo, NM", "Sandia Park, NM", "San Pablo, CO", "Sanbornton, NH", "San Rafael, NM", "Sandy Ridge, NC", "Sandy Hook, MS", "Sandusky, NY", "Sanbornville, NH", "San Gregorio, CA", "San Manuel, AZ", "Kykotsmovi Village, AZ", "Morovis, PR", "Thorndale, TX", "San Jose, NM", "Santa Margarita, CA", "San Jon, NM", "San Lucas, CA", "Sangerville, ME", "Sanderson, FL", "Sanders, AZ", "San Ygnacio, TX", "Big Sandy, TX", "Sandoval, IL", "Sandyville, WV", "San Patricio, NM", "Santa Ysabel, CA", "Santo Domingo Pueblo, NM", "Santa Clara, UT", "Leesburg, AL", "Lake Hughes, CA", "Dunseith, ND", "Hayes, SD", "Bosque, NM", "Bartelso, IL", "Sanford, CO", "Center Sandwich, NH", "West Sand Lake, NY", "North San Juan, CA", "San Antonio, PR", "Sandy Hook, VA", "San Geronimo, CA", "San Cristobal, NM", "San Simon, AZ", "Sand Creek, WI", "San Miguel, NM", "Sand Creek, MI", "Sanford, TX", "Sand Point, AK", "Guayanilla, PR", "Ilfeld, NM", "Haigler, NE", "Des Arc, AR", "Canovanas, PR", "Mc Henry, MD", "Santa Rita Park, CA", "Santa, ID", "Sandy Ridge, PA", "Port Sanilac, MI", "San Joaquin, CA", "Sand Lake, NY", "Santa Fe, TN", "San Ysidro, NM", "Sanborn, IA", "San Ardo, CA", "Sandborn, IN", "Sanders, MT", "San Jose, IL", "Sandhill, MS", "Sanborn, ND", "San Luis, CO", "Sand Springs, MT", "Sanders, KY", "Sandersville, MS", "Sandgap, KY", "Sangerfield, NY", "Sanostee, NM", "Sandy Lake, PA", "San Pierre, IN", "San Perlita, TX", "Sandstone, WV", "Big Sandy, WV", "Sandy Level, VA", "Sand Fork, WV", "Sand Coulee, MT", "Santiago, MN", "Santo, TX", "San Acacia, NM", "San Fidel, NM", "Punta Santiago, PR", "Santa Fe, MO", "Santa Elena, TX", "Sandyville, OH", "Sandy Point, VA", "Sanford, VA", "Santa Rita, GU", "Coto Laurel, PR", "Paicines, CA", "Maricao, PR", "Caledonia, MS", "Saint Francisville, IL", "Villalba, PR", "Arnoldsburg, WV", "Tensed, ID", "Columbia, SD", "Argyle, IA", "Adjuntas, PR", "Ackworth, IA", "Hopkinton, IA", "Jamestown, MO", "Mitchellville, IA", "Rutledge, MO", "Seminary, MS", "Gorham, IL", "Hanover, NM", "Center, ND", "Saint Regis Falls, NY", "Sondheimer, LA"
+
+Puerto Rico
+1 cities:
+Luis Munoz Marin Intl. Airport
+
+Costa Rica
+5 cities:
+Juan Santamaria International Airport, San Jose, San Jose, Santa Ana, San Antonio De Belen
+
+Mexico
+12 cities:
+Los Cabos Airport, Cabo San Lucas, San Jose Del Cabo, San Luis Potosi Airport, San Luis Potosi, Llano San Juan Airport, Todos Santos, San Juan Del Rio, San Felipe, San Lucas, San Pedro Sula, San Felipe Airport
+
+Jamaica
+1 cities:
+Sangster International Airport
+
+Dominican Republic
+4 cities:
+Las Americas Airport, Santiago Municipal Airport, Santo Domingo, Santiago
+
+Nicaragua
+1 cities:
+Augusto C Sandino Airport
+
+El Salvador
+6 cities:
+Comalapa International Airport, San Salvador, San Miguel, Santa Ana, San Luis Talpa, San Luis
+
+Chile
+3 cities:
+Arturo Merino Benitez Airport Santiago, Santiago, Comuna Prov. Santiago
+
+Honduras
+2 cities:
+Ramon Villeda Morales Airport, San Pedro Sula
+
+Brazil
+7 cities:
+Santos Dumont Airport, Santa Genoveva Airport, Santos, Santa Cruz Do Sul, Feira De Santana, Santo Andre, Santos Air Base
+
+Norway
+8 cities:
+Sandefjord Airport, Sandane, Sandnes, Sandefjord, Sand, Sandane Airport, Sandnessjoen Airport, Sandnessjoen
+
+Spain
+22 cities:
+Santiago De Compostela Airport, San Javier Airport, San Sebastian, San Sebastian Airport, Santa Susanna, Santander Airport, Santiago De Compostela, La Palma Airport, Sant Cugat Del Valles, Santa Cruz De Tenerife, Santander, Puerto De Santiago, Santa Cruz De La Palma, Santa Ponsa, Santiago De La Ribera, San Luis Menorca, San Boi Barcelona, Santiago La Coruna, Sant Josep, San Boi De Llobregat, Santa Margalida, Santa Fe
+
+Philippines
+3 cities:
+General Santos City, General Santos International Airport (Tambler Airport), San Juan
+
+Cape Verde
+1 cities:
+"Santa Maria, Sal Island"
+
+Argentina
+16 cities:
+Bariloche Airport, San Carlos De Bariloche, San Juan Airport, San Juan, San Rafael, San Rafael Airport, Chapelco Airport, San Luis Airport, San Martin De Andes, Santa Fe Airport, Santa Fe, San Luis, San Fernando, Santa Rosa Airport, Santiago Del Ester, Santa Rosa
+
+Greece
+2 cities:
+Santorini, Santorini Island
+
+Canada
+20 cities:
+Sandspit Airport, "Sandspit, BC", "Sandford, ON", "Sandy Lake, MB", "Sandy Hook, MB", "Sandy Lake, ON", "Sanikiluaq, NU", "Sandy Bay, SK", "Sandfield, NS", "San Clara, MB", "Sanford, MB", "Cap - Sante, QC", "Sandilands, MB", "Sandy Cove, NS", "Bright Sand, SK", "Sandringham, NL", "Sangudo, AB", "Rochon Sands, AB", "Port Sandfield, ON", "Sandy Cove, NL"
+
+Colombia
+2 cities:
+Santa Marta, Santaguida Airport
+
+Malaysia
+1 cities:
+Sandakan
+
+India
+1 cities:
+Sanganeer Airport
+
+Bolivia
+2 cities:
+Viru Viru International Airport, Santa Cruz
+
+South Africa
+3 cities:
+Sandton, Eastgate Sandton, Santon
+
+Italy
+16 cities:
+Sant Egidio Airport, Sanremo, Santa Margherita Ligure, "Santa Teresa Gallura, Sardinia", San Remo, "San Teodoro ( Nu ), Sardinia", San Benedetto D. Tron, Porto San Giorgio, Santa Margherita, "Sanremo, Im", Porto Santo Stefano, Sesto San Giovanni, Santa Maria Capua Vetere, Santa Cristina Valgardena, San Giorgio A Cremano, Torre San Giorgio
+
+Trinidad And Tobago
+1 cities:
+San Fernando
+
+China
+2 cities:
+Sanya Phoenix International Airport, Sanya
+
+Guatemala
+1 cities:
+Santa Elena Airport
+
+Portugal
+5 cities:
+"Porto Santo, Madeira", Porto Santo Airport, Santarem, Santa Cruz, Santo Tirso
+
+Peru
+1 cities:
+"San Miguel, Lima"
+
+Panama
+1 cities:
+Santiagocity
+
+Yemen
+2 cities:
+Sanaa, San'a International Airport
+
+Turkey
+2 cities:
+Sanliurfa, SANLIURFA AIRPORT
+
+Malta
+1 cities:
+San Gwann
+
+Japan
+2 cities:
+Sano, Sanjo
+
+Sweden
+1 cities:
+Sandviken
+
+Equatorial Guinea
+1 cities:
+Santa Isabel Airport
+
+Germany
+3 cities:
+Sankt Ingbert, Sankt Augustin, Sangerhausen
+
+Australia
+2 cities:
+Sanctuary Point, "Sandy Bay, TA"
+
+Ecuador
+1 cities:
+Santo Domingo
+
+Northern Mariana Islands
+1 cities:
+San Vicente
+
+France
+1 cities:
+Salaise Sur Sanne
+
+Venezuela
+2 cities:
+San Tome, San Tome Airport
+
+
+Process finished with exit code 0
