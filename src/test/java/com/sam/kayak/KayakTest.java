@@ -19,7 +19,7 @@ import static org.apache.commons.lang3.time.DateUtils.addDays;
 import static org.apache.commons.lang3.time.DateUtils.addWeeks;
 import static org.junit.Assert.assertTrue;
 
-public class CarsTest {
+public class KayakTest {
 
     private WebDriver driver;
 
