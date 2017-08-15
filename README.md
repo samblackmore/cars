@@ -26,11 +26,11 @@ Windows:
 - Start
 - Edit the system environment variables
 - System variables - Path - Edit...
- - New - `path/to/chrome`
- - New - `path/to/chromedriver`
+  - New - `path/to/chrome`
+  - New - `path/to/chromedriver`
 - System variables - New...
- - name: CLASSPATH
- - value: `path/to/jars`
+  - name: CLASSPATH
+  - value: `path/to/jars`
 
 ## Run
 Windows:
