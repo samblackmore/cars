@@ -31,7 +31,7 @@ public class Country {
         StrBuilder s = new StrBuilder();
         s.appendln(this.name);
         s.appendln(this.destinations.size() + " cities:");
-        s.appendln(String.join(", ", this.destinations.stream().map(Destination::getName).collect(toList())));
+        s.appendln(String.join(", ", this.destinations.stream().map(Destination::getEscapedName).collect(toList())));
         return s.toString();
     }
 }

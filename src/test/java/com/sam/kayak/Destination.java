@@ -19,7 +19,9 @@ public class Destination {
         this.country_id = country_id;
     }
 
-    String getName() {
+    String getEscapedName() {
+        if (name.contains(","))
+            name = String.format("\"%s\"", name);
         return name;
     }
 
